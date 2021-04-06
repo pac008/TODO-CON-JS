@@ -26,6 +26,7 @@ export const crearTodoHtml = ( todo ) => {
     div.innerHTML = htmlTodo;
 
     divTodoList.append( div.firstElementChild );
+    
     return div;
 }
 
@@ -45,6 +46,7 @@ txtInput.addEventListener('keyup', ( event ) => {
 
         txtInput.value = '';
     }
+    contar();
 })
 
 
@@ -58,7 +60,7 @@ divTodoList.addEventListener('click', ( event ) => {
 
         todoList.marcarCompletado( todoId );
         todoElemento.classList.toggle('completed')
-        contar();
+       
 
     } else if( nombreElemento.includes('button') ) {
 
@@ -66,6 +68,7 @@ divTodoList.addEventListener('click', ( event ) => {
         divTodoList.removeChild( todoElemento );
 
     }
+    contar();
 });
 
 btnBorrar.addEventListener('click', () => {
@@ -77,8 +80,8 @@ btnBorrar.addEventListener('click', () => {
             let elemento = divTodoList.children[i];
 
             if( elemento.classList.contains('completed') ) {
-                    console.log( elemento );
-                /* divTodoList.removeChild( elemento ); */
+                    
+                 divTodoList.removeChild( elemento );
             }
     }
 

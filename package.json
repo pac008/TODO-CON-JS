@@ -1,6 +1,6 @@
 {
   "name": "aplicacion-de-tareas",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "esta es una aplicación de tareas",
   "main": "index.js",
   "scripts": {
